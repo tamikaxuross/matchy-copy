@@ -120,9 +120,25 @@ console.log(animals.length);
 var friends = [];
 //create function getRandom assign it the paramets of array
 function getRandom(array) {
-  // return math.floor to get random index from array
+  // return math.floor to get random index from array length
   return Math.floor(Math.random() * array.length);
 } 
+//create randomInex variable using getRandom function 
+let randomIndex = getRandom(animals);
+// get random animal using random index
+let randomAnimal =
+animals[randomIndex];
+//add random animal's name to friend array
+friends.push(randomAnimal.name); 
+//select first animal object from animals array and assign to variable 
+let bear = animals[0];
+//use bracket notation add 'friends' property
+bear['friends'] = friends; 
+//log to console
+console.log(bear); 
+
+
+
 
 
 /**
