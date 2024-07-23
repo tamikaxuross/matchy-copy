@@ -12,6 +12,18 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+function search(animals, name) {
+    //loop through each animal object in animal array
+    for(let i= 0; i < animals.length; i++) {
+        //if animals name matched parameter
+        if(animals[i].name === name) {
+            //return animal object if found
+            return animals[i];
+        }
+    }
+    //return null if no matching  animal is found
+    return null;
+}
 
 
 
