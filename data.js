@@ -81,12 +81,63 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animals = [];
+// animal object to animals array
+animals.push(animal);
+//log animals to console
+console.log(animals);
+// create variable duck and assign it characteritics
+let duck = {
+    species: 'duck',
+    name: 'Jerome',
+    noises: ['quack', 'honk', 'sneeze', 'whoosh']
+};
+//push duck object to animals array
+animals.push(duck);
+//log animals array to console
+console.log(animals);
+//create two more animal objects with species, name and noises
+let bunny = {
+    species: 'rabbit',
+    name: 'Barbie',
+    noises: ['bonk', 'bing', 'bahg']
+};
 
+let elephant = {
+    species: 'elephant',
+    name: 'Alfred',
+    noises: ['maw', 'miw', 'mej']
+};
+//push new animals to animals array
+animals.push(bunny, elephant);
+//log animals to console.
+console.log(animals);
+//log animals length to console.
+console.log(animals.length);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var friends = [];
+//create function getRandom assign it the paramets of array
+function getRandom(array) {
+    // return math.floor to get random index from array length
+    return Math.floor(Math.random() * array.length);
+}
+//create randomInex variable using getRandom function
+let randomIndex = getRandom(animals);
+// get random animal using random index
+let randomAnimal =
+    animals[randomIndex];
+//add random animal's name to friend array
+friends.push(randomAnimal.name);
+//select first animal object from animals array and assign to variable
+let bear = animals[0];
+//use bracket notation add 'friends' property
+bear['friends'] = friends;
+//log to console
+console.log(bear);
 
 
 
